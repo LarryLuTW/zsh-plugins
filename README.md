@@ -21,3 +21,4 @@ zplug "Larry850806/zsh-plugins", use:git.plugin.zsh
 
 - [ohmyzsh/git plugin](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh)
 - [tcnksm/docker-alias](https://github.com/tcnksm/docker-alias/blob/master/zshrc)
+- [ohmyzsh/docker-compose](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/docker-compose/docker-compose.plugin.zsh)

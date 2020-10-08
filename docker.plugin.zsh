@@ -31,3 +31,13 @@ dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/[
 
 # Bash into running container
 dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
+
+alias dco='docker-compose'
+
+alias dcob='docker-compose build'
+alias dcops='docker-compose ps'
+
+alias dcore='docker-compose restart'
+alias dcost='docker-compose stop'
+alias dcoup='docker-compose up'
+alias dcoupd='docker-compose up -d'
