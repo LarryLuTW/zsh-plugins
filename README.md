@@ -6,9 +6,13 @@ Here are many useful aliases and functions for zsh. This is for my own usage. If
 
 ### Install all plugins in the repository
 
+Just put the following line in your .zshrc, and run `zplug install` in your terminal.
+
 ```sh
 zplug "Larry850806/zsh-plugins"
 ```
+
+For more details about how to use zplug, please goto [zplug usage](https://github.com/zplug/zplug#usage)
 
 ### Install specific plugin
 
@@ -16,6 +20,10 @@ zplug "Larry850806/zsh-plugins"
 # only use git plugin
 zplug "Larry850806/zsh-plugins", use:git.plugin.zsh
 ```
+
+### Update plugin
+
+Just run `zplug update` in your terminal.
 
 ## Reference
 
