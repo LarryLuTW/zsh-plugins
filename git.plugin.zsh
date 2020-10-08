@@ -23,6 +23,22 @@ function git_main_branch() {
   fi
 }
 
+# Rename branch
+function grename() {
+  if [[ -z "$1" || -z "$2" ]]; then
+    echo "Usage: $0 old_branch new_branch"
+    return 1
+  fi
+
+  # Rename branch locally
+  git branch -m "$1" "$2"
+  # Rename branch in origin remote
+  if git push origin :"$1"; then
+    git push --set-upstream origin "$2"
+  fi
+}
+
+
 #
 # Aliases
 #
@@ -52,7 +68,6 @@ alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
 
 alias ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'
-alias gpsup='git push --set-upstream origin $(git_current_branch)'
 
 alias gl='git pull --rebase'
 
@@ -62,6 +77,7 @@ alias gma='git merge --abort'
 alias gp='git push'
 alias gpf='git push --force-with-lease'
 alias gpf!='git push --force'
+alias gpsup='git push --set-upstream origin $(git_current_branch)'
 
 alias grb='git rebase'
 alias grba='git rebase --abort'
@@ -80,16 +96,5 @@ alias gst='git status'
 
 alias gt='git tag'
 
-function grename() {
-  if [[ -z "$1" || -z "$2" ]]; then
-    echo "Usage: $0 old_branch new_branch"
-    return 1
-  fi
-
-  # Rename branch locally
-  git branch -m "$1" "$2"
-  # Rename branch in origin remote
-  if git push origin :"$1"; then
-    git push --set-upstream origin "$2"
-  fi
-}
+alias gitify="g init && gaa && gc Init && hub create && gpsup"
+alias gitifyp="g init && gaa && gc Init && hub create -p && gpsup"
