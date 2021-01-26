@@ -71,8 +71,8 @@ alias ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'
 
 alias gl='git pull --rebase'
 
-alias glg='log --graph --decorate --oneline -m'
-alias glga='log --graph --all --decorate --oneline -m'
+alias glg='git log --graph --decorate --oneline -m'
+alias glga='git log --graph --all --decorate --oneline -m'
 
 alias gm='git merge'
 alias gma='git merge --abort'
