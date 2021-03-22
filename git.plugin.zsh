@@ -57,9 +57,9 @@ alias gc!='git commit -v --no-edit --amend'
 alias gca='git commit -v -a -m'
 alias gca!='git commit -v -a --no-edit --amend'
 
-alias gco='git checkout'
-alias gcm='git checkout $(git_main_branch)'
-alias gcob='git checkout $(git branch | fzf)'
+alias gs='git switch'
+alias gsm='git checkout $(git_main_branch)'
+alias gsb='git checkout $(git branch | fzf)'
 
 alias gpristine='git reset --hard && git clean -dffx'
 
