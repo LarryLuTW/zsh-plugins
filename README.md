@@ -9,7 +9,7 @@ Here are many useful aliases and functions for zsh. This is for my own usage. If
 Just put the following line in your .zshrc, and run `zplug install` in your terminal.
 
 ```sh
-zplug "Larry850806/zsh-plugins"
+zplug "LarryLuTW/zsh-plugins"
 ```
 
 For more details about how to use zplug, please goto [zplug usage](https://github.com/zplug/zplug#usage)
@@ -18,7 +18,7 @@ For more details about how to use zplug, please goto [zplug usage](https://githu
 
 ```sh
 # only use git plugin
-zplug "Larry850806/zsh-plugins", use:git.plugin.zsh
+zplug "LarryLuTW/zsh-plugins", use:git.plugin.zsh
 ```
 
 ### Update plugin
