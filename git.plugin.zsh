@@ -101,3 +101,5 @@ alias gt='git tag'
 
 alias gitify="g init && gaa && gc Init && hub create && gpsup"
 alias gitifyp="g init && gaa && gc Init && hub create -p && gpsup"
+
+alias hb="hub browse"
